@@ -22,7 +22,6 @@
  * used in advertising or otherwise to promote the sale, use or other dealings
  * in this Software without prior written authorization from Arnaud LE HORS.
  */
-/* $XFree86: xc/extras/Xpm/cxpm/cxpm.c,v 1.2 2001/08/01 00:44:34 tsi Exp $ */
 
 /*****************************************************************************\
 * cxpm.c:                                                                     *
@@ -101,7 +100,7 @@ ErrorMessage(
     case XpmSuccess:
 	return;
     case XpmOpenFailed:
-	/* L10N_Comments : Error produced when filename does not exist 
+	/* L10N_Comments : Error produced when filename does not exist
 	   or insufficient permissions to open (i.e. cxpm /no/such/file ) */
 	error = gettext("Cannot open file");
 	break;
@@ -112,7 +111,7 @@ ErrorMessage(
 	break;
     case XpmNoMemory:
 	/* L10N_Comments : Error produced when filename can be read, but
-	   is too big for memory 
+	   is too big for memory
 	   (i.e. limit datasize 32 ; cxpm /usr/dt/backdrops/Crochet.pm ) */
 	error = gettext("Not enough memory");
 	break;

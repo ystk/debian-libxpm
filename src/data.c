@@ -31,7 +31,6 @@
 *                                                                             *
 *  Developed by Arnaud Le Hors                                                *
 \*****************************************************************************/
-/* $XFree86: xc/extras/Xpm/lib/data.c,v 1.3 2001/10/28 03:32:10 tsi Exp $ */
 
 /* October 2004, source code review by Thomas Biege <thomas@suse.de> */
 
@@ -62,7 +61,8 @@ ParseComment(xpmData *data)
 	register char c;
 	register unsigned int n = 0;
 	unsigned int notend;
-	char *s, *s2;
+	char *s;
+	const char *s2;
 
 	s = data->Comment;
 	*s = data->Bcmt[0];
@@ -120,7 +120,8 @@ ParseComment(xpmData *data)
 	register int c;
 	register unsigned int n = 0, a;
 	unsigned int notend;
-	char *s, *s2;
+	char *s;
+	const char *s2;
 
 	s = data->Comment;
 	*s = data->Bcmt[0];

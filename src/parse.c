@@ -1,4 +1,3 @@
-/* $XdotOrg: lib/Xpm/src/parse.c,v 1.6 2005/07/16 21:11:25 alanc Exp $ */
 /*
  * Copyright (C) 1989-95 GROUPE BULL
  *
@@ -23,7 +22,6 @@
  * used in advertising or otherwise to promote the sale, use or other dealings
  * in this Software without prior written authorization from GROUPE BULL.
  */
-/* $XFree86: xc/extras/Xpm/lib/parse.c,v 1.2 2000/09/26 15:56:43 tsi Exp $ */
 
 /*****************************************************************************\
 * parse.c:                                                                    *
@@ -34,7 +32,6 @@
 *                                                                             *
 *  Developed by Arnaud Le Hors                                                *
 \*****************************************************************************/
-/* $XFree86$ */
 
 /*
  * The code related to FOR_MSW has been added by
@@ -73,7 +70,7 @@ LFUNC(ParsePixels, int, (xpmData *data, unsigned int width,
 			 unsigned int cpp, XpmColor *colorTable,
 			 xpmHashTable *hashtable, unsigned int **pixels));
 
-char *xpmColorKeys[] = {
+const char *xpmColorKeys[] = {
     "s",				/* key #1: symbol */
     "m",				/* key #2: mono visual */
     "g4",				/* key #3: 4 grays visual */
@@ -208,7 +205,8 @@ xpmParseColors(
     unsigned int lastwaskey;		/* key read */
     char buf[BUFSIZ+1];
     char curbuf[BUFSIZ];		/* current buffer */
-    char **sptr, *s;
+    const char **sptr;
+    char *s;
     XpmColor *color;
     XpmColor *colorTable;
     char **defaults;
@@ -383,7 +381,7 @@ ParsePixels(
     unsigned int a, x, y;
 
     if ((height > 0 && width >= UINT_MAX / height) ||
-	width * height >= UINT_MAX / sizeof(unsigned int)) 
+	width * height >= UINT_MAX / sizeof(unsigned int))
 	return XpmNoMemory;
 #ifndef FOR_MSW
     iptr2 = (unsigned int *) XpmMalloc(sizeof(unsigned int) * width * height);
