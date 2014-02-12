@@ -1,3 +1,68 @@
+libxpm (1:3.5.10-1) unstable; urgency=low
+
+  * Clean up libtool m4 files.
+  * Revert to shipping the doc as PS instead of PDF, so libxpm-dev can be
+    Multi-Arch: same.  Thanks to Jakub Wilk.
+  * New upstream release.
+  * Bump debhelper build-dep to 8.1.3 for ${misc:Pre-Depends}.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 21 Apr 2012 11:21:07 +0200
+
+libxpm (1:3.5.9-4) unstable; urgency=low
+
+  * Exclude xpmutils from the debug package so it really is multi-arch safe
+    (closes: #646960).  Thanks, Jakub Wilk!
+  * Don't require fakeroot for debian/rules clean.
+  * Replace the change from 1:3.5.9-3 with the equivalent fix committed
+    upstream.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 31 Oct 2011 16:41:44 +0100
+
+libxpm (1:3.5.9-3) unstable; urgency=low
+
+  * Apply patch from Ubuntu to fix build failure when using ld --no-add-
+    needed. Closes: #604494.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 21 Oct 2011 20:21:48 -0700
+
+libxpm (1:3.5.9-2) unstable; urgency=low
+
+  [ Cyril Brulebois ]
+  * Build xpm.pdf from xpm.PS.gz, and use debian/libxpm-dev.docs to
+    install it. That's the only available documentation we've got, so
+    let's ship it (Closes: #466081).
+  * Add ghostscript build-dep, for ps2pdf.
+  * Fix typo in long descriptions: specificied → specified.
+
+  [ Julien Cristau ]
+  * Remove David from Uploaders.
+  * Drop Pre-Depends on x11-common, only needed for upgrades from the
+    monolith.
+  * Drop Replaces on xbase-clients 6.8.x.
+
+  [ Steve Langasek ]
+  * Build for multiarch.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 21 Oct 2011 15:24:28 -0700
+
+libxpm (1:3.5.9-1) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Remove myself from Uploaders.
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+
+  [ Cyril Brulebois ]
+  * New upstrem release.
+  * Bump xutils-dev build-dep for new macros.
+  * Update debian/copyright from upstream COPYING.
+  * Drop debian/libxpm-dev.docs, xpm.PS is gone.
+  * Switch from --list-missing to --fail-missing for additional safety.
+  * Exclude libXpm.la from dh_install accordingly.
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Nov 2010 10:59:03 +0100
+
 libxpm (1:3.5.8-1) unstable; urgency=low
 
   [ Timo Aaltonen ]
