@@ -1,3 +1,14 @@
+libxpm (1:3.5.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rewrite debian/rules using dh, bump compat to 9, drop xsfbs.
+  * Remove Cyril from Uploaders.
+  * Bump x11proto-core-dev build-dep per configure.ac.
+  * Disable silent build rules.
+  * Override gzip-file-is-not-multi-arch-same-safe for xpm.PS.gz.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 13 Jul 2014 12:24:10 +0200
+
 libxpm (1:3.5.10-1) unstable; urgency=low
 
   * Clean up libtool m4 files.
