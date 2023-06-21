@@ -14,7 +14,7 @@ PACKAGE = libxpm4
 	dh $@ --with quilt,autoreconf --builddirectory=build/ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- --disable-silent-rules
+	dh_auto_configure -- --disable-silent-rules XPM_PATH_COMPRESS=/usr/bin/compress XPM_PATH_UNCOMPRESS=/bin/uncompress XPM_PATH_GZIP=/bin/gzip
 
 override_dh_install:
 	dh_install --fail-missing -XlibXpm.la

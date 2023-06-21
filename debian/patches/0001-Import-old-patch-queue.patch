@@ -1,0 +1,33 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Tue, 20 Jun 2023 13:47:32 +0000
+Subject: Import old patch queue
+
+Forwarded: not-needed
+---
+ autogen.sh | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+ create mode 100755 autogen.sh
+
+diff --git a/autogen.sh b/autogen.sh
+new file mode 100755
+index 0000000..478f82a
+--- /dev/null
++++ b/autogen.sh
+@@ -0,0 +1,17 @@
++--- libxpm-3.5.12.orig/autogen.sh
+++++ libxpm-3.5.12/autogen.sh
++@@ -0,0 +1,14 @@
+++#! /bin/sh
+++
+++srcdir=`dirname $0`
+++test -z "$srcdir" && srcdir=.
+++
+++ORIGDIR=`pwd`
+++cd $srcdir
+++
+++autoreconf -v --install || exit 1
+++cd $ORIGDIR || exit $?
+++
+++if test -z "$NOCONFIGURE"; then
+++    $srcdir/configure "$@"
+++fi

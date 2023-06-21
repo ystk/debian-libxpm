@@ -1,0 +1,7 @@
+0001-Import-old-patch-queue.patch
+0002-configure-add-disable-open-zfile-instead-of-requirin.patch
+0003-PATCH-Fix-CVE-2022-4883-compression-commands-depend-.patch
+0004-CVE-2022-4883-Use-gzip-d-instead-of-gunzip.patch
+0005-PATCH-Fix-CVE-2022-44617-Runaway-loop-with-width-of-.patch
+0006-PATCH-Prevent-a-double-free-in-the-error-code-path-C.patch
+0007-PATCH-Fix-CVE-2022-46285-Infinite-loop-on-unclosed-c.patch
