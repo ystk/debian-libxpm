@@ -5,3 +5,7 @@
 0005-PATCH-Fix-CVE-2022-44617-Runaway-loop-with-width-of-.patch
 0006-PATCH-Prevent-a-double-free-in-the-error-code-path-C.patch
 0007-PATCH-Fix-CVE-2022-46285-Infinite-loop-on-unclosed-c.patch
+Avoid-CVE-2023-43786-stack-exhaustion-in-XPutImage.patch
+Avoid-CVE-2023-43787-integer-overflow-in-XCreateImage.patch
+CVE-2023-43788.patch
+CVE-2023-43789.patch
